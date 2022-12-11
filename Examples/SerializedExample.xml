@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UnnamedNode type="LebiEngine.Core.Scene, LebiEngine">
+	<Name type="System.String, System.Private.CoreLib">Main</Name>
+	<GameObjects type="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib">
+		<Element_0 type="System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib">
+			<Key type="System.String, System.Private.CoreLib">Camera</Key>
+			<Value type="LebiEngine.Core.WorldObject, LebiEngine">
+				<Name type="System.String, System.Private.CoreLib">Camera</Name>
+				<Children type="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib" />
+				<Transform type="LebiEngine.Core.Transform, LebiEngine">
+					<Position type="LebiEngine.Core.Vector2, LebiEngine">
+						<x type="System.Single, System.Private.CoreLib">0</x>
+						<y type="System.Single, System.Private.CoreLib">0</y>
+					</Position>
+					<Scale type="LebiEngine.Core.Vector2, LebiEngine">
+						<x type="System.Single, System.Private.CoreLib">1</x>
+						<y type="System.Single, System.Private.CoreLib">1</y>
+					</Scale>
+					<Rotation type="System.Single, System.Private.CoreLib">0</Rotation>
+				</Transform>
+				<Components type="System.Collections.Generic.List`1[[LebiEngine.Core.Component, LebiEngine]], System.Private.CoreLib">
+					<Element_0 type="LebiEngine.Core.Camera, LebiEngine">
+						<Size type="System.Single, System.Private.CoreLib">6</Size>
+						<ClearingColor type="LebiEngine.Core.Color, LebiEngine">
+							<R type="System.Single, System.Private.CoreLib">0.18</R>
+							<G type="System.Single, System.Private.CoreLib">0.14</G>
+							<B type="System.Single, System.Private.CoreLib">0.2</B>
+							<A type="System.Single, System.Private.CoreLib">1</A>
+						</ClearingColor>
+						<Clearing type="System.Boolean, System.Private.CoreLib">True</Clearing>
+					</Element_0>
+					<Element_1 type="Diatom.CameraController, Diatom" />
+					<Element_2 type="LebiEngine.Audio.AudioListener, LebiEngine" />
+				</Components>
+			</Value>
+		</Element_0>
+		<Element_1 type="System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib">
+			<Key type="System.String, System.Private.CoreLib">Player</Key>
+			<Value type="LebiEngine.Core.Prefab, LebiEngine">
+				<source type="System.String, System.Private.CoreLib">Prefabs/Player</source>
+			</Value>
+		</Element_1>
+		<Element_2 type="System.Collections.Generic.KeyValuePair`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib">
+			<Key type="System.String, System.Private.CoreLib">Map</Key>
+			<Value type="LebiEngine.Core.WorldObject, LebiEngine">
+				<Name type="System.String, System.Private.CoreLib">Map</Name>
+				<Children type="System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[LebiEngine.Core.GameObject, LebiEngine]], System.Private.CoreLib" />
+				<Transform type="LebiEngine.Core.Transform, LebiEngine">
+					<Position type="LebiEngine.Core.Vector2, LebiEngine">
+						<x type="System.Single, System.Private.CoreLib">0</x>
+						<y type="System.Single, System.Private.CoreLib">0</y>
+					</Position>
+					<Scale type="LebiEngine.Core.Vector2, LebiEngine">
+						<x type="System.Single, System.Private.CoreLib">1</x>
+						<y type="System.Single, System.Private.CoreLib">1</y>
+					</Scale>
+					<Rotation type="System.Single, System.Private.CoreLib">0</Rotation>
+				</Transform>
+				<Components type="System.Collections.Generic.List`1[[LebiEngine.Core.Component, LebiEngine]], System.Private.CoreLib">
+					<Element_0 type="LebiEngine.Core.TilemapRenderer, LebiEngine">
+						<Shader type="LebiEngine.Core.Reference`1[[LebiEngine.Core.Shader, LebiEngine]], LebiEngine">
+							<Source type="System.String, System.Private.CoreLib">Core/Shaders/DefaultSpriteWorld</Source>
+						</Shader>
+						<Color type="LebiEngine.Core.Color, LebiEngine">
+							<R type="System.Single, System.Private.CoreLib">1</R>
+							<G type="System.Single, System.Private.CoreLib">1</G>
+							<B type="System.Single, System.Private.CoreLib">1</B>
+							<A type="System.Single, System.Private.CoreLib">1</A>
+						</Color>
+						<RenderOrder type="System.Int32, System.Private.CoreLib">0</RenderOrder>
+						<Tilemap type="LebiEngine.Core.Reference`1[[LebiEngine.Core.Tilemap, LebiEngine]], LebiEngine">
+							<Source type="System.String, System.Private.CoreLib">Tiles/Tilemap</Source>
+						</Tilemap>
+						<TileSize type="LebiEngine.Core.Vector2, LebiEngine">
+							<x type="System.Single, System.Private.CoreLib">1.2</x>
+							<y type="System.Single, System.Private.CoreLib">1.2</y>
+						</TileSize>
+						<PixelsPerTile type="System.Int32, System.Private.CoreLib">16</PixelsPerTile>
+					</Element_0>
+					<Element_1 type="LebiEngine.Physics.TilemapCollider, LebiEngine">
+						<Tilemap type="LebiEngine.Core.Reference`1[[LebiEngine.Core.Tilemap, LebiEngine]], LebiEngine">
+							<Source type="System.String, System.Private.CoreLib">Tiles/Tilemap</Source>
+						</Tilemap>
+						<TileSize type="LebiEngine.Core.Vector2, LebiEngine">
+							<x type="System.Single, System.Private.CoreLib">1.2</x>
+							<y type="System.Single, System.Private.CoreLib">1.2</y>
+						</TileSize>
+					</Element_1>
+					<Element_2 type="LebiEngine.Physics.PhysicsBody, LebiEngine">
+						<FixedRotation type="System.Boolean, System.Private.CoreLib">True</FixedRotation>
+						<Type type="LebiEngine.Physics.BodyType, LebiEngine">Kinematic</Type>
+					</Element_2>
+				</Components>
+			</Value>
+		</Element_2>
+	</GameObjects>
+</UnnamedNode>
