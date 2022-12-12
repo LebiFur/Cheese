@@ -9,10 +9,12 @@ Also it's not a NuGet package because I don't care lol.
 
 Members have to meet these conditions to be serialized or deserialized
 
-1. Containing class defines `CheeseSerializable` attribute:
+1. Containing type defines `CheeseSerializable` attribute:
     - Public and non public members have to define `CheeseSerializable` attribute
-2. Containing class doesn't define `CheeseSerializable` attribute
+2. Containing type doesn't define `CheeseSerializable` attribute
     - Only non public members have to define `CheeseSerializable` attribute
+
+Fields cannot be readonly and properties have to define a getter and a setter.
 
 ### Example
 
